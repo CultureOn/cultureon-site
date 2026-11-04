@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos — CultureOn</title>
+  <meta name="description" content="O trabalho da CultureOn, explicado pelas decisões: estratégia, vídeo e design.">
+  <meta property="og:title" content="Projetos — CultureOn">
+  <meta property="og:image" content="../assets/img/projetos/autodromo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="../" class="nav__logo" aria-label="CultureOn — início">
+    <img src="../assets/img/logo.svg" alt="Culture On" width="150" height="12">
+  </a>
+  <span class="nav__place"><i class="dot" aria-hidden="true"></i>Portimão, Portugal</span>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="../about/">Sobre Nós</a>
+    <a href="../projetos/" aria-current="page">Projetos</a>
+    <a href="../os-nossos-videos/">Vídeos</a>
+    <a href="../contactos/">Contactos</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="hero hero--page hero--compact">
+    <h1 class="hero__title hero__title--md">
+      <span>O trabalho,</span>
+      <span>explicado pelas <span class="accent-inline">decisões.</span></span>
+    </h1>
+    <div class="hero__side">
+      <p class="hero__lead">Cada projeto aqui tem um problema de negócio por trás. É isso que mostramos: o que estava em causa, o que foi decidido e o que ficou construído.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight projects">
+    <div class="filters" role="group" aria-label="Filtrar projetos">
+      <button class="chip is-active" data-filter="all">Todos</button><button class="chip" data-filter="video">Vídeo</button><button class="chip" data-filter="design">Identidade</button><button class="chip" data-filter="marca">Marca Pessoal</button>
+    </div>
+    <div class="projects__grid">
+      <a href="../projetos/autodromo-internacional-do-algarve/" class="project reveal" data-cat="video">
+        <div class="project__img"><img src="../assets/img/projetos/autodromo.jpg" alt="Autódromo Algarve · GT World" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Autódromo Algarve · GT World</h3>
+          <span>2026</span>
+        </div>
+        <p class="project__tags">Vídeo &amp; Foto · Cobertura de Evento</p>
+      </a>
+      <a href="../projetos/ferragudo-bay/" class="project reveal" data-cat="design">
+        <div class="project__img"><img src="../assets/img/projetos/ferragudo-bay.jpg" alt="Ferragudo Bay" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Ferragudo Bay</h3>
+          <span>2026</span>
+        </div>
+        <p class="project__tags">Identidade Visual · Vídeos · Web Design · Editorial Design</p>
+      </a>
+      <a href="../projetos/cerveja-gilbertos/" class="project reveal" data-cat="design">
+        <div class="project__img"><img src="../assets/img/projetos/gilbertos.jpg" alt="Cerveja Gilberto&#x27;s" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Cerveja Gilberto&#x27;s</h3>
+          <span>2026</span>
+        </div>
+        <p class="project__tags">Identidade Visual · Packaging</p>
+      </a>
+      <a href="../projetos/rodrigo-frieza/" class="project reveal" data-cat="marca">
+        <div class="project__img"><img src="../assets/img/projetos/rodrigo-frieza.jpg" alt="Rodrigo Frieza" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Rodrigo Frieza</h3>
+          <span>2022</span>
+        </div>
+        <p class="project__tags">Identidade Visual · Social Media</p>
+      </a>
+      <a href="../projetos/viviana-feitor/" class="project reveal" data-cat="marca">
+        <div class="project__img"><img src="../assets/img/projetos/viviana-feitor.jpg" alt="Viviana Feitor" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Viviana Feitor</h3>
+          <span>2025</span>
+        </div>
+        <p class="project__tags">Marca Pessoal · Vídeos · Identidade Visual</p>
+      </a>
+      <a href="../projetos/cristian-briceag/" class="project reveal" data-cat="marca">
+        <div class="project__img"><img src="../assets/img/projetos/cristian-briceag.jpg" alt="Cristian Briceag" loading="lazy"></div>
+        <div class="project__meta">
+          <h3>Cristian Briceag</h3>
+          
+        </div>
+        <p class="project__tags">Identidade Visual · Motion System · Vídeos</p>
+      </a>
+    </div>
+    <p class="filters__empty" hidden>Nenhum projeto nesta categoria — ainda.</p>
+  </section>
+
+  <section class="section cta-band">
+    <p class="cta-band__text">Queres ver o teu projeto aqui?</p>
+    <a href="../contactos/" class="btn">Fala connosco <span aria-hidden="true">→</span></a>
+  </section>
+</main>
+
+<footer class="footer" id="contacto">
+  <div class="footer__top">
+    <div>
+      <p class="eyebrow eyebrow--light">Contacto</p>
+      <h2 class="footer__title">Vamos dar <br>o <span class="accent">switch</span>.</h2>
+    </div>
+    <form class="form" action="https://formspree.io/f/SEU_ID" method="POST">
+      <label for="email">Tens um projeto em mente? Deixa o teu email e falamos contigo.</label>
+      <div class="form__row">
+        <input id="email" name="email" type="email" placeholder="o.teu@email.pt" required autocomplete="email">
+        <button type="submit">Enviar</button>
+      </div>
+      <p class="form__status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="footer__info">
+    <div>
+      <p class="footer__label">Email</p>
+      <a href="mailto:cultureonlisboa@gmail.com">cultureonlisboa@gmail.com</a>
+    </div>
+    <div>
+      <p class="footer__label">Telefone</p>
+      <a href="tel:+351966180200">+351 966 180 200</a>
+    </div>
+    <div>
+      <p class="footer__label">Redes</p>
+      <a href="https://www.instagram.com/cultureon.pt">Instagram</a>
+    </div>
+    <div>
+      <p class="footer__label">Páginas</p>
+      <a href="../">Início</a> · <a href="../about/">Sobre Nós</a> · <a href="../projetos/">Projetos</a> · <a href="../os-nossos-videos/">Vídeos</a> · <a href="../contactos/">Contactos</a>
+    </div>
+  </div>
+
+  <div class="footer__wordmark" aria-hidden="true">CULTURE<span class="accent">*</span>ON</div>
+
+  <div class="footer__bottom">
+    <span>©2026 CultureOn. Todos os direitos reservados.</span>
+    <span>Portimão, Portugal.</span>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

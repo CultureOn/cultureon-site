@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactos — CultureOn</title>
+  <meta name="description" content="Fala connosco: pedidos de orçamento para estratégia, vídeo, marca pessoal e design. Portimão, Algarve.">
+  <meta property="og:title" content="Contactos — CultureOn">
+  <meta property="og:image" content="../assets/img/projetos/autodromo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="../" class="nav__logo" aria-label="CultureOn — início">
+    <img src="../assets/img/logo.svg" alt="Culture On" width="150" height="12">
+  </a>
+  <span class="nav__place"><i class="dot" aria-hidden="true"></i>Portimão, Portugal</span>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="../about/">Sobre Nós</a>
+    <a href="../projetos/">Projetos</a>
+    <a href="../os-nossos-videos/">Vídeos</a>
+    <a href="../contactos/" aria-current="page">Contactos</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="hero hero--page hero--compact">
+    <h1 class="hero__title">
+      <span>Fala</span>
+      <span class="accent">connosco</span>
+    </h1>
+    <div class="hero__side">
+      <p class="hero__lead">Conta-nos o que precisas. Respondemos rápido — somos poucos, e ninguém se perde em emails.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight contact">
+    <aside class="contact__info">
+      <div>
+        <p class="footer__label">Email</p>
+        <a href="mailto:cultureonlisboa@gmail.com" class="contact__big">cultureonlisboa@gmail.com</a>
+        <p class="contact__note">Pedidos de projeto e outras questões.</p>
+      </div>
+      <div>
+        <p class="footer__label">Telefone / WhatsApp</p>
+        <a href="tel:+351966180200" class="contact__big">+351 966 180 200</a>
+        <p class="contact__note">Todos os dias. Respondemos o mais rápido possível.</p>
+      </div>
+      <div>
+        <p class="footer__label">Morada</p>
+        <p class="contact__big">Rua Teófilo de Braga 9<br>8500-668 Portimão</p>
+      </div>
+      <div>
+        <p class="footer__label">Redes</p>
+        <a href="https://www.instagram.com/cultureon.pt" class="contact__big">@cultureon.pt</a>
+      </div>
+    </aside>
+
+    <form class="form form--full" action="https://formspree.io/f/SEU_ID" method="POST">
+      <div class="field">
+        <label for="c-nome">Nome</label>
+        <input id="c-nome" name="nome" type="text" required autocomplete="name" placeholder="O teu nome">
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="o.teu@email.pt">
+      </div>
+      <div class="field">
+        <label for="c-tel">Telemóvel</label>
+        <input id="c-tel" name="telemovel" type="tel" autocomplete="tel" placeholder="+351 9xx xxx xxx">
+      </div>
+      <fieldset class="field field--chips">
+        <legend>Tipo de projeto</legend>
+        <label><input type="checkbox" name="tipo" value="Estratégia"><span>Estratégia</span></label>
+        <label><input type="checkbox" name="tipo" value="Vídeo"><span>Vídeo</span></label>
+        <label><input type="checkbox" name="tipo" value="Marca Pessoal"><span>Marca Pessoal</span></label>
+        <label><input type="checkbox" name="tipo" value="Design"><span>Design</span></label>
+      </fieldset>
+      <div class="field">
+        <label for="c-orc">Orçamento previsto</label>
+        <select id="c-orc" name="orcamento">
+          <option value="">Seleciona…</option>
+          <option>Até €2.000</option>
+          <option>€2.000 – €5.000</option>
+          <option>€5.000 – €10.000</option>
+          <option>€10.000 – €20.000</option>
+          <option>Mais de €20.000</option>
+          <option>Ainda não sei</option>
+        </select>
+      </div>
+      <div class="field field--wide">
+        <label for="c-msg">Mensagem</label>
+        <textarea id="c-msg" name="mensagem" rows="5" required placeholder="Conta-nos sobre o teu negócio e o que queres fazer."></textarea>
+      </div>
+      <div class="field--wide form__submit">
+        <button type="submit" class="btn">Enviar pedido <span aria-hidden="true">→</span></button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer footer--compact" id="contacto">
+  <div class="footer__info">
+    <div>
+      <p class="footer__label">Email</p>
+      <a href="mailto:cultureonlisboa@gmail.com">cultureonlisboa@gmail.com</a>
+    </div>
+    <div>
+      <p class="footer__label">Telefone</p>
+      <a href="tel:+351966180200">+351 966 180 200</a>
+    </div>
+    <div>
+      <p class="footer__label">Redes</p>
+      <a href="https://www.instagram.com/cultureon.pt">Instagram</a>
+    </div>
+    <div>
+      <p class="footer__label">Páginas</p>
+      <a href="../">Início</a> · <a href="../about/">Sobre Nós</a> · <a href="../projetos/">Projetos</a> · <a href="../os-nossos-videos/">Vídeos</a> · <a href="../contactos/">Contactos</a>
+    </div>
+  </div>
+
+  <div class="footer__wordmark" aria-hidden="true">CULTURE<span class="accent">*</span>ON</div>
+
+  <div class="footer__bottom">
+    <span>©2026 CultureOn. Todos os direitos reservados.</span>
+    <span>Portimão, Portugal.</span>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

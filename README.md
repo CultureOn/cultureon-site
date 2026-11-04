@@ -5,11 +5,14 @@ Site estático em HTML, CSS e JS. Não precisa de build nem de dependências.
 ## Estrutura
 
 ```
-index.html        Home
-styles.css        Estilos (Syne nos títulos, Inter no corpo, acento #D9FF47)
-main.js           Menu mobile, animações, vídeos e formulário
-assets/img/       Logo, projetos e logos de clientes
-assets/video/     Vídeos do reel (comprimidos, 720px, sem som)
+index.html                     Home
+about/                         Sobre Nós
+projetos/                      Lista de projetos (com filtros)
+projetos/<projeto>/            Caso de estudo (6)
+os-nossos-videos/              Vídeos (YouTube, carregam ao clicar)
+contactos/                     Contactos + formulário completo
+styles.css · main.js           Estilos e scripts partilhados
+assets/img · assets/video      Imagens e vídeos otimizados
 ```
 
 ## Ver localmente
@@ -39,6 +42,7 @@ O formulário usa o [Formspree](https://formspree.io), que tem plano gratuito:
 
 ## Por fazer
 
-- ~~Página `/about`~~ (feita) · Páginas `/projetos`, `/os-nossos-videos`, `/contactos`
-- Páginas individuais de cada projeto
+- Ligar os formulários ao Formspree (substituir `SEU_ID` em todos os `index.html`)
+- Imagens de galeria dos casos de estudo (só a Gilberto's tem galeria por agora)
 - Favicon e imagem de partilha (og:image) definitivos
+- Quando tudo estiver aprovado: domínio cultureon.pt (ver passos acima)
