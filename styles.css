@@ -253,7 +253,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .step__num { margin-bottom: 8px; }
-  .step--result { padding: 24px 16px; }
+  .step.step--result { padding: 28px 22px 32px; margin-top: 8px; }
   .team__grid { grid-template-columns: 1fr 1fr; gap: 24px 12px; }
 }
 
