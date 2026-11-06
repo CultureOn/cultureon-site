@@ -79,7 +79,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
   font-size: min(176px, calc(100cqi / var(--fit, 8))); line-height: .9; letter-spacing: -.035em;
 }
 .hero__title span { display: block; }
-.hero__title .accent { color: var(--accent); -webkit-text-stroke: 4px var(--black); paint-order: stroke fill; }
+.hero__title .accent { color: var(--accent); }
 .hero__side { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 40px; flex-wrap: wrap; }
 .hero__lead { max-width: 360px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.35; }
 .hero__scroll { text-transform: uppercase; font-weight: 500; letter-spacing: .02em; }
@@ -197,11 +197,13 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 .footer__info { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 28px 0; border-top: 1px solid #2a2a2a; font-size: 15px; }
 .footer__info a:hover { color: var(--accent); }
 .footer__label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--mid); margin-bottom: 6px; }
-.footer__wordmark {
-  font-family: var(--display); font-weight: 800; letter-spacing: -.045em; line-height: .8;
-  font-size: calc(100cqi / 11.4); white-space: nowrap; margin: 24px 0; text-align: center;
-}
-.footer__wordmark .accent { font-family: var(--body); font-weight: 400; }
+/* Logo em loop, da direita para a esquerda */
+.footer__marquee { overflow: hidden; margin: 32px calc(var(--pad) * -1); padding: 8px 0; }
+.marquee__track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee__group { display: flex; flex-shrink: 0; }
+.marquee__group img { height: clamp(44px, 8vw, 120px); width: auto; max-width: none; margin-right: clamp(40px, 6vw, 96px); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.footer__marquee:hover .marquee__track { animation-play-state: paused; }
 .footer__bottom { display: flex; justify-content: space-between; font-size: 13px; color: var(--mid); }
 
 /* ================= SOBRE ================= */
