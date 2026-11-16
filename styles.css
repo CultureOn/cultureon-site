@@ -848,3 +848,28 @@ body:has(.hero--home .btn:focus-visible) .hero--home .hero__title .accent { colo
 /* Botão: texto um pouco mais forte, seta mais pequena */
 .btn, .form--full .btn, .mp-identity .btn, .footer .btn { font-weight: 600; }
 .btn__arrow svg { width: 18px; height: 9px; }
+
+/* ================= SERVIÇOS: cabeçalho em frase com recuo (estilo editorial) ================= */
+.svc-head { margin-bottom: clamp(40px, 6vw, 88px); }
+.svc-statement {
+  font-family: var(--display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(28px, 4.4vw, 68px); line-height: 1.02; letter-spacing: -.045em;
+}
+.svc-line { display: block; }
+.svc-line--muted { color: var(--mid); }
+@media (min-width: 1100px) {
+  .svc-line { white-space: nowrap; }
+  .svc-line--indent { padding-left: 22%; }
+}
+.svc-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-top: clamp(28px, 3vw, 44px); }
+.svc-note { font-size: 11px; line-height: 1.55; text-transform: uppercase; letter-spacing: .02em; color: #555; max-width: 46ch; }
+@media (min-width: 1100px) { .svc-note { margin-left: 22%; } }
+.svc-circle {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--black);
+  display: grid; place-items: center; transition: background .25s, color .25s, transform .3s;
+}
+.svc-circle:hover { background: var(--black); color: var(--white); transform: rotate(-45deg); }
+/* Nomes dos serviços mais pequenos, abaixo do título */
+.service__name { font-size: clamp(28px, 3.4vw, 52px) !important; letter-spacing: -.05em; }
+.service, .service:hover { padding: clamp(22px, 3vw, 40px) 0; }
+@media (min-width: 1100px) { .service__num { padding-top: .5em; } }
