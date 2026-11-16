@@ -1,7 +1,6 @@
 /* CultureOn
    Títulos: Inter Bold (espaçamento apertado) · Corpo: Inter · Cores: preto, branco, acento #D9FF47 */
 
-@font-face { font-family: "Syne"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/syne-latin-700-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
@@ -928,6 +927,5 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
   .hero__bar { flex-basis: 36px; margin-top: .65em; }
 }
 
-/* Home: título "O teu switch criativo." em Syne Bold */
-.hero--home .hero__title, .hero--home .hero__title .accent { font-family: "Syne", var(--display) !important; font-weight: 700 !important; letter-spacing: -.075em !important; word-spacing: .14em; }
-.hero--home .hero__title { line-height: .92 !important; }
+/* Home: título um pouco maior que os restantes */
+.hero--home .hero__title { font-size: min(136px, calc(100cqi / var(--fit, 8))) !important; }
