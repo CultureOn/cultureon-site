@@ -929,5 +929,5 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 }
 
 /* Home: título "O teu switch criativo." em Syne Bold */
-.hero--home .hero__title, .hero--home .hero__title .accent { font-family: "Syne", var(--display) !important; font-weight: 700 !important; letter-spacing: -.035em !important; }
+.hero--home .hero__title, .hero--home .hero__title .accent { font-family: "Syne", var(--display) !important; font-weight: 700 !important; letter-spacing: -.075em !important; word-spacing: .14em; }
 .hero--home .hero__title { line-height: .92 !important; }
