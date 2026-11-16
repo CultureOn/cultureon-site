@@ -756,3 +756,27 @@ a.contact__big:hover { background: var(--accent); }
   @keyframes st-on { 0%, 55%, 100% { opacity: 0; transform: translateY(6px); } 65%, 90% { opacity: 1; transform: none; } }
 }
 @media (prefers-reduced-motion: reduce) { .btn__state, .btn__off, .btn__on { animation: none !important; } }
+
+/* ================= HOME: o site "liga" quando o botão passa a ON =================
+   Ao passar o rato no botão do topo, o primeiro ecrã (menu + topo + carrossel) fica preto,
+   com um brilho lima atrás do botão. Ao tirar o rato, volta ao branco. */
+.nav, .hero--home, .home-reel { transition: background-color .5s ease, color .5s ease; }
+.nav__logo img, .hero--home .hero__lead { transition: filter .5s ease, color .5s ease; }
+body:has(.hero--home .btn:hover) .nav,
+body:has(.hero--home .btn:focus-visible) .nav { background: rgba(10,10,10,.96); color: var(--white); }
+body:has(.hero--home .btn:hover) .nav__logo img,
+body:has(.hero--home .btn:focus-visible) .nav__logo img { filter: invert(1); }
+body:has(.hero--home .btn:hover) .nav__links a::after { background: var(--white); }
+body:has(.hero--home .btn:hover) .nav__toggle span { background: var(--white); }
+body:has(.hero--home .btn:hover) .hero--home,
+body:has(.hero--home .btn:focus-visible) .hero--home { background: var(--black); color: var(--white); }
+body:has(.hero--home .btn:hover) .hero--home .hero__lead,
+body:has(.hero--home .btn:focus-visible) .hero--home .hero__lead { color: #cfcfcf; }
+body:has(.hero--home .btn:hover) .home-reel,
+body:has(.hero--home .btn:focus-visible) .home-reel { background: var(--black); }
+.home-reel { padding-bottom: 0; }
+.hero--home .btn { transition: box-shadow .5s ease, border-color .5s ease; }
+.hero--home .btn:hover, .hero--home .btn:focus-visible {
+  border-color: var(--black);
+  box-shadow: 0 0 0 1px rgba(217,255,71,.35), 0 0 40px 6px rgba(217,255,71,.28), 0 0 120px 40px rgba(217,255,71,.12);
+}
