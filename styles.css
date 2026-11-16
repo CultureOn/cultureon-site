@@ -799,3 +799,26 @@ body:has(.hero--home .btn:focus-visible) .hero--home .hero__title .accent { colo
 /* Tudo alinhado à esquerda (sem blocos centrados ou encostados à direita) */
 .mp-video { margin: 0; }
 .faq__list, .about__cols, .case__body { margin-left: 0; }
+
+/* Todos os títulos em maiúsculas (também os mais longos) */
+.is-sub { text-transform: uppercase !important; letter-spacing: -.05em !important; }
+
+/* ================= SERVIÇOS (estética editorial: etiqueta · nome enorme · descrição curta) ================= */
+.services__list { gap: 0; }
+.service, .service:hover {
+  grid-template-columns: 1fr; gap: 14px; padding: clamp(32px, 5vw, 64px) 0; background: none;
+  padding-left: 0; padding-right: 0; align-items: center;
+}
+.service__num { font-size: 12px; font-weight: 500; color: var(--mid); padding-top: 0; letter-spacing: .02em; }
+.service__name {
+  font-size: clamp(44px, 6.2vw, 104px) !important; line-height: .95; letter-spacing: -.065em;
+  text-transform: uppercase; transition: transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.service__name sup { font-size: .3em; vertical-align: 1.6em; margin-left: .1em; }
+.service:hover .service__name { transform: translateX(14px); }
+.service__body p { font-size: 13px; line-height: 1.5; color: #555; max-width: 34ch; margin-bottom: 12px; }
+.service__body .tags li { font-size: 12px; padding: 3px 10px; }
+@media (min-width: 1100px) {
+  .service, .service:hover { grid-template-columns: 140px minmax(0, 1fr) 280px; gap: var(--pad); }
+  .service__num { align-self: start; padding-top: 1.1em; }
+}
