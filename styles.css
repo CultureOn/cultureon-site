@@ -650,3 +650,16 @@ a.contact__big:hover { background: var(--accent); }
   .footer__info { grid-template-columns: 1fr 1fr; }
   .footer__bottom { flex-direction: column; gap: 4px; }
 }
+
+/* ================= MINIMALISTA: sem linhas divisórias ================= */
+.nav.is-scrolled { border-color: transparent; }
+.services__list, .service, .clients__grid, .clients__grid li, .footer__info, .steps, .step, .faq__list, .faq__item,
+.case__meta, .case__block, .case__next, .vsection__head, .contact__info, .form--full, .cs__body, .cs__col--before, .cs__stats,
+.mp-pillars, .mp-pillar, .nav__links, .nav__links a { border: 0 !important; }
+.cs { border: 0; background: var(--grey); }
+.cs[open] { box-shadow: none; }
+.mp-step { border: 0; background: var(--grey); }
+.mp-two__item { border: 0; background: #1a1a1a; }
+.services__list { display: grid; gap: 4px; }
+.faq__item summary { padding: 20px 0; }
+.nav__links { box-shadow: 0 12px 24px rgba(0,0,0,.06); }

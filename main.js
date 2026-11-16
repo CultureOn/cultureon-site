@@ -77,7 +77,7 @@ document.querySelectorAll('form.form').forEach(form => {
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     if (form.action.includes('SEU_ID')) {
-      status.textContent = 'Formulário ainda por ligar — escreve-nos para cultureonlisboa@gmail.com.';
+      status.textContent = 'Formulário ainda por ligar — escreve-nos para geral@cultureon.pt.';
       return;
     }
     status.textContent = 'A enviar…';
@@ -87,7 +87,7 @@ document.querySelectorAll('form.form').forEach(form => {
       form.reset();
       status.textContent = 'Obrigado! Entramos em contacto em breve.';
     } catch {
-      status.textContent = 'Não foi possível enviar. Tenta por email: cultureonlisboa@gmail.com';
+      status.textContent = 'Não foi possível enviar. Tenta por email: geral@cultureon.pt';
     }
   });
 });
