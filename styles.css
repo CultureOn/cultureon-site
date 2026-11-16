@@ -588,6 +588,7 @@ a.contact__big:hover { background: var(--accent); }
 .hero--center .hero__lead { max-width: 620px; margin: 0 auto; }
 .home-reel { padding-top: 0; }
 .filters--center { justify-content: center; }
+.hero--center .pill-label { justify-self: center; }
 .home-reel__card { width: clamp(200px, 26vw, 400px); aspect-ratio: 900 / 1100; }
 
 /* Botão "switch": o interruptor liga ao passar o rato */
@@ -603,6 +604,8 @@ a.contact__big:hover { background: var(--accent); }
   padding: 0 .06em;
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
+
+@media (max-width: 900px) { .hero .hero__title.is-sub { font-size: min(36px, calc(100cqi / var(--fit, 8))) !important; } }
 
 /* ---------- REVEAL ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s cubic-bezier(.2,.7,.2,1); }
