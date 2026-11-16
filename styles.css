@@ -723,3 +723,36 @@ a.contact__big:hover { background: var(--accent); }
   box-shadow: 0 6px 26px rgba(217,255,71,.35);
 }
 .btn:hover::after, .btn:focus-visible::after { opacity: 1; }
+
+/* ================= BOTÃO OFF/ON (versão final) =================
+   Pílula preta com o texto + pílula interior que passa de "Off" (branco) a "On" (lima) */
+.btn, .form--full .btn, .mp-identity .btn, .footer .btn {
+  display: inline-flex; align-items: center; gap: 0; padding: 0; margin: 0;
+  background: var(--black); color: var(--white); border: 3px solid var(--black); border-radius: 999px;
+  font: 600 16px var(--body); text-transform: none; letter-spacing: -.02em; white-space: nowrap;
+  box-shadow: none; transform: none; cursor: pointer;
+}
+.btn::before, .btn::after { display: none !important; }
+.btn:hover, .btn:focus-visible, .form--full .btn:hover, .mp-identity .btn:hover, .footer .btn:hover { background: var(--black); color: var(--white); box-shadow: none; }
+.btn__label { padding: 13px 20px 13px 24px; }
+.btn__state {
+  position: relative; display: grid; place-items: center; width: 84px; height: 46px;
+  background: var(--white); color: var(--black); border-radius: 999px;
+  transition: background .3s, box-shadow .35s;
+}
+.btn__off, .btn__on { grid-area: 1 / 1; transition: opacity .2s, transform .3s; }
+.btn__on { opacity: 0; transform: translateY(6px); }
+.btn sup { font-size: 9px; font-weight: 500; letter-spacing: 0; vertical-align: 9px; margin-left: 2px; }
+.btn:hover .btn__state, .btn:focus-visible .btn__state, .btn:active .btn__state { background: var(--accent); box-shadow: 0 0 22px rgba(217,255,71,.6); }
+.btn:hover .btn__off, .btn:focus-visible .btn__off, .btn:active .btn__off { opacity: 0; transform: translateY(-6px); }
+.btn:hover .btn__on, .btn:focus-visible .btn__on, .btn:active .btn__on { opacity: 1; transform: none; }
+.mp-identity .btn, .footer .btn { border-color: #333; }
+@media (hover: none) {
+  .btn__state { animation: st-bg 5s ease-in-out infinite; }
+  .btn__off { animation: st-off 5s ease-in-out infinite; }
+  .btn__on { animation: st-on 5s ease-in-out infinite; }
+  @keyframes st-bg { 0%, 55%, 100% { background: var(--white); box-shadow: none; } 65%, 90% { background: var(--accent); box-shadow: 0 0 22px rgba(217,255,71,.6); } }
+  @keyframes st-off { 0%, 55%, 100% { opacity: 1; transform: none; } 65%, 90% { opacity: 0; transform: translateY(-6px); } }
+  @keyframes st-on { 0%, 55%, 100% { opacity: 0; transform: translateY(6px); } 65%, 90% { opacity: 1; transform: none; } }
+}
+@media (prefers-reduced-motion: reduce) { .btn__state, .btn__off, .btn__on { animation: none !important; } }
