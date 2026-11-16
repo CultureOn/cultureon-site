@@ -76,7 +76,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 .hero__title {
   font-family: var(--display); font-weight: 800; text-transform: uppercase;
   /* --fit = largura (em) da palavra mais longa; garante que nunca sai do ecrã */
-  font-size: min(176px, calc(100cqi / var(--fit, 8))); line-height: .9; letter-spacing: -.035em;
+  font-size: min(128px, calc(100cqi / var(--fit, 8))); line-height: .9; letter-spacing: -.035em;
 }
 .hero__title span { display: block; }
 .hero__title .accent { color: var(--accent); }
@@ -208,7 +208,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 
 /* ================= SOBRE ================= */
 .nav__links a[aria-current="page"]::after { transform: scaleX(1); }
-.hero--page .hero__title { font-size: min(160px, calc(100cqi / var(--fit, 8))); }
+.hero--page .hero__title { font-size: min(96px, calc(100cqi / var(--fit, 8))); }
 .team-photo { margin: 0 var(--pad); aspect-ratio: 16 / 8; overflow: hidden; background: var(--black); }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .about__cols--single { grid-template-columns: 1fr 1fr; max-width: 900px; }
@@ -259,7 +259,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 
 /* ================= COMPONENTES PARTILHADOS ================= */
 .hero--compact { padding-top: clamp(64px, 10vh, 120px); }
-.hero--page .hero__title--md { font-size: min(104px, calc(100cqi / var(--fit, 8))); line-height: .95; }
+.hero--page .hero__title--md { font-size: min(64px, calc(100cqi / var(--fit, 8))); line-height: .95; }
 .hero__title--md span span { display: inline; }
 .accent-inline { background: var(--accent); padding: 0 .08em; }
 .section--tight { padding-top: clamp(24px, 4vw, 48px); }
@@ -291,7 +291,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 .case__head { padding: clamp(48px, 8vh, 96px) var(--pad) clamp(32px, 4vw, 48px); }
 .link-arrow--back { margin-bottom: 32px; }
 .link-arrow--back:hover span { transform: translateX(-5px); }
-.case__title { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: min(128px, calc(100cqi / var(--fit, 8))); line-height: .92; letter-spacing: -.03em; margin-bottom: clamp(32px, 4vw, 56px); }
+.case__title { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: min(80px, calc(100cqi / var(--fit, 8))); line-height: .92; letter-spacing: -.03em; margin-bottom: clamp(32px, 4vw, 56px); }
 .case__meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; border-top: 1px solid var(--black); padding-top: 20px; }
 .case__meta dt { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--mid); margin-bottom: 6px; }
 .case__meta dd { margin: 0; font-size: 15px; font-weight: 500; }
@@ -311,7 +311,7 @@ mark { background: var(--accent); color: inherit; padding: 0 .08em; }
 }
 .case__next:hover { background: var(--accent); }
 .case__next-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
-.case__next-title { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: min(96px, calc(100cqi / var(--fit, 8))); line-height: .95; letter-spacing: -.03em; }
+.case__next-title { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: min(64px, calc(100cqi / var(--fit, 8))); line-height: .95; letter-spacing: -.03em; }
 
 /* ================= VÍDEOS ================= */
 .vsection { --ratio: 9 / 16; }
