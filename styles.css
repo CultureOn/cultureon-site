@@ -878,3 +878,6 @@ body:has(.hero--home .btn:focus-visible) .hero--home .hero__title .accent { colo
 .svc-statement sup { font-size: .3em; vertical-align: 1.5em; }
 .svc-statement mark { background: linear-gradient(transparent 10%, var(--accent) 10%, var(--accent) 92%, transparent 92%); padding: 0 .05em; }
 .svc-circle[href="about/"]:hover { transform: rotate(45deg); }
+
+/* Home: SWITCH sempre no verde da marca */
+.hero--home .hero__title .accent { color: var(--accent) !important; text-shadow: none; }
