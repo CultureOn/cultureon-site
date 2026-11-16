@@ -1,7 +1,6 @@
 /* CultureOn
    Títulos: Inter Bold (espaçamento apertado) · Corpo: Inter · Cores: preto, branco, acento #D9FF47 */
 
-@font-face { font-family: "Syne"; font-style: normal; font-weight: 800; font-display: swap; src: url("assets/fonts/syne-latin-800-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
@@ -782,9 +781,8 @@ body:has(.hero--home .btn:focus-visible) .home-reel { background: var(--black); 
   box-shadow: 0 0 0 1px rgba(217,255,71,.35), 0 0 40px 6px rgba(217,255,71,.28), 0 0 120px 40px rgba(217,255,71,.12);
 }
 
-/* "SWITCH" no título da Home: Syne ExtraBold, preto no estado normal, lima só quando o site "liga" */
+/* "SWITCH" no título da Home: preto no estado normal, lima só quando o site "liga" */
 .hero--home .hero__title .accent {
-  font-family: "Syne", var(--display); font-weight: 800; letter-spacing: -.03em;
   color: var(--black); transition: color .5s ease, text-shadow .5s ease;
 }
 body:has(.hero--home .btn:hover) .hero--home .hero__title .accent,
