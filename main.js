@@ -53,6 +53,23 @@ document.querySelectorAll('.vcard__player[data-yt]').forEach(btn => btn.addEvent
   btn.appendChild(f);
 }));
 
+// Vídeos em janela (página Marca Pessoal)
+const vmodal = document.querySelector('.vmodal');
+if (vmodal) {
+  const frame = vmodal.querySelector('.vmodal__frame');
+  const close = () => { vmodal.close(); frame.innerHTML = ''; };
+  document.querySelectorAll('[data-yt-modal]').forEach(btn => btn.addEventListener('click', () => {
+    const id = btn.dataset.ytModal;
+    if (!id) return;
+    vmodal.classList.toggle('is-vertical', !!btn.closest('.mp-reel'));
+    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Vídeo"></iframe>`;
+    vmodal.showModal();
+  }));
+  vmodal.querySelector('.vmodal__close').addEventListener('click', close);
+  vmodal.addEventListener('click', e => { if (e.target === vmodal) close(); });
+  vmodal.addEventListener('close', () => { frame.innerHTML = ''; });
+}
+
 // Formulários: enviam para o Formspree via fetch.
 // Enquanto o ID não estiver configurado (SEU_ID), mostram só uma mensagem.
 document.querySelectorAll('form.form').forEach(form => {
