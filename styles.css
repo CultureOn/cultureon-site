@@ -845,3 +845,6 @@ body:has(.hero--home .btn:focus-visible) .hero--home .hero__title .accent { colo
   background: var(--accent); color: var(--black); border-color: var(--accent);
   box-shadow: 0 0 40px 6px rgba(217,255,71,.25), 0 0 120px 40px rgba(217,255,71,.1);
 }
+/* Botão: texto um pouco mais forte, seta mais pequena */
+.btn, .form--full .btn, .mp-identity .btn, .footer .btn { font-weight: 600; }
+.btn__arrow svg { width: 18px; height: 9px; }
