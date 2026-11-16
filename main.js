@@ -24,7 +24,7 @@ const vio = new IntersectionObserver(entries => {
     if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else { v.pause(); }
   });
 }, { threshold: 0.2 });
-document.querySelectorAll('.reel video').forEach(v => vio.observe(v));
+document.querySelectorAll('.reel video, .mp-reel video').forEach(v => vio.observe(v));
 
 // Filtros da página Projetos
 const chips = document.querySelectorAll('.filters [data-filter]');

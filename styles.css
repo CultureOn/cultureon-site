@@ -582,6 +582,13 @@ a.contact__big:hover { background: var(--accent); }
 }
 .is-title .accent-inline, .is-title .pill, .is-title mark { padding-top: .02em; }
 
+/* Home: hero centrado */
+.hero--center { justify-items: center; text-align: center; padding-top: clamp(72px, 12vh, 140px); padding-bottom: clamp(32px, 5vh, 56px); }
+.hero--center .hero__side { flex-direction: column; align-items: center; gap: 28px; }
+.hero--center .hero__lead { max-width: 440px; margin: 0 auto; }
+.home-reel { padding-top: 0; }
+.home-reel__card { width: clamp(200px, 26vw, 400px); aspect-ratio: 900 / 1100; }
+
 /* ---------- REVEAL ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s cubic-bezier(.2,.7,.2,1); }
 .js .reveal.is-in { opacity: 1; transform: none; }
@@ -613,6 +620,7 @@ a.contact__big:hover { background: var(--accent); }
 
   .hero { padding-top: 48px; }
   .hero__side { flex-direction: column; align-items: flex-start; }
+  .hero--center .hero__side { align-items: center; }
   .reel__track { grid-auto-columns: 70%; }
 
   .service { grid-template-columns: 1fr; gap: 12px; }
