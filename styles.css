@@ -562,6 +562,26 @@ a.contact__big:hover { background: var(--accent); }
 }
 @media (prefers-reduced-motion: reduce) { .mp-reel { overflow-x: auto; } }
 
+/* ================= REGRA DOS TÍTULOS =================
+   Até 4 palavras  -> .is-title : maiúsculas, tamanho do título da Home, linhas muito juntas
+   Mais de 4       -> .is-sub   : frase normal (só a 1.ª letra maiúscula), tamanho de subtítulo */
+.section, .clients, .footer__top > div, .case__head, .case__next { container-type: inline-size; }
+.section__head--split > div:has(.is-title) { flex: 1 1 100%; container-type: inline-size; }
+.is-title {
+  text-transform: uppercase !important;
+  font-family: var(--display); font-weight: 700 !important;
+  font-size: min(112px, calc(100cqi / var(--fit, 8))) !important;
+  line-height: var(--lh, .86) !important;
+  letter-spacing: -.065em !important;
+  max-width: none !important;
+}
+.is-sub {
+  text-transform: none !important;
+  letter-spacing: -.04em !important;
+  line-height: 1.08 !important;
+}
+.is-title .accent-inline, .is-title .pill, .is-title mark { padding-top: .02em; }
+
 /* ---------- REVEAL ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s cubic-bezier(.2,.7,.2,1); }
 .js .reveal.is-in { opacity: 1; transform: none; }
