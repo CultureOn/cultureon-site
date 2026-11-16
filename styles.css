@@ -929,3 +929,13 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 
 /* Home: título um pouco maior que os restantes */
 .hero--home .hero__title { font-size: min(136px, calc(100cqi / var(--fit, 8))) !important; }
+
+/* Logos de clientes em loop infinito para a esquerda */
+.logos { overflow: hidden; padding: clamp(56px, 8vw, 112px) 0; -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.logos__track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+.logos:hover .logos__track { animation-play-state: paused; }
+.logos__group { display: flex; align-items: center; gap: clamp(48px, 6vw, 96px); padding-right: clamp(48px, 6vw, 96px); }
+.logos__group img { height: clamp(26px, 2.6vw, 38px); width: auto; max-width: none; filter: grayscale(1); opacity: .7; transition: opacity .25s; }
+.logos__group img:hover { opacity: 1; }
+/* Tamanho visual equilibrado: os logos altos e os largos ficam com peso parecido */
+.logos__group img { height: auto; width: auto; max-height: clamp(36px, 3.4vw, 50px); max-width: clamp(104px, 9vw, 140px); }
