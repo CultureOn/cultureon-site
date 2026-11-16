@@ -792,3 +792,10 @@ body:has(.hero--home .btn:focus-visible) .hero--home .hero__title .accent { colo
 .hero--home { padding-top: clamp(72px, 12vh, 140px); padding-bottom: clamp(32px, 5vh, 56px); }
 .hero--home .hero__side { flex-direction: column; align-items: flex-start; gap: 28px; }
 .hero--home .hero__lead { max-width: 560px; }
+
+/* Topos alinhados à esquerda com texto e botão empilhados */
+.hero--stack .hero__side { flex-direction: column; align-items: flex-start; gap: 28px; }
+.hero--stack .hero__lead { max-width: 560px; }
+/* Tudo alinhado à esquerda (sem blocos centrados ou encostados à direita) */
+.mp-video { margin: 0; }
+.faq__list, .about__cols, .case__body { margin-left: 0; }
