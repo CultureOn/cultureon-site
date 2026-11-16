@@ -514,6 +514,14 @@ a.contact__big:hover { background: var(--accent); }
 .mp-pillar__tag { font-weight: 600; font-size: 17px; }
 .mp-pillar p:not([class]) { font-size: 15px; color: #444; }
 .mp-pillar__pull { margin-top: auto; padding-top: 12px; font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: -.01em; }
+.mp-noscript { margin-top: clamp(48px, 6vw, 80px); background: var(--black); color: var(--white); padding: clamp(32px, 5vw, 72px); display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px clamp(32px, 5vw, 72px); align-items: end; container-type: inline-size; }
+.mp-noscript__kicker { grid-column: 1 / -1; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+.mp-noscript__title { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: min(64px, calc(100cqi / 18)); line-height: .95; letter-spacing: -.03em; }
+.mp-noscript__text { display: grid; gap: 14px; color: #cfcfcf; font-size: 16px; max-width: 48ch; }
+@media (max-width: 900px) {
+  .mp-noscript { grid-template-columns: 1fr; }
+  .mp-noscript__title { font-size: calc(100cqi / 11); }
+}
 .mp-flow { margin-top: clamp(48px, 6vw, 80px); border: 1px solid var(--black); padding: clamp(24px, 4vw, 48px); display: grid; gap: 28px; }
 .mp-flow__title { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 2.4vw, 36px); line-height: 1.05; letter-spacing: -.02em; max-width: 24ch; }
 .mp-flow__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; counter-reset: f; }
