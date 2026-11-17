@@ -1012,3 +1012,41 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
   .nav__place { margin: 0 auto; }
   .nav__links { justify-self: auto; }
 }
+
+/* ================= Ajustes (rev. 17 nov) ================= */
+/* Serviços: menos espaço entre elementos */
+.services .svc-head { margin-bottom: clamp(24px, 3vw, 40px); }
+.services .svc-foot { justify-content: flex-end; margin-top: 0; }
+.service, .service:hover { padding: clamp(14px, 1.6vw, 22px) 0; }
+.service__body p { margin-bottom: 8px; }
+.service__body .tags { gap: 6px; }
+@media (min-width: 1100px) { .service, .service:hover { grid-template-columns: 140px minmax(0, 1fr) 300px; } }
+
+/* Projetos: "Switch ON" sem destaque; o ON acende a lima ao passar o rato */
+.switch-on { transition: color .35s ease, text-shadow .35s ease; }
+.section__title:hover .switch-on, #projetos .section__head:hover .switch-on { color: var(--accent); text-shadow: 0 0 30px rgba(217,255,71,.35); }
+
+/* Sobre Nós: foto da equipa mais contida */
+.team-photo { aspect-ratio: auto; display: grid; grid-template-columns: 1fr; background: none; }
+.team-photo img { width: 100%; height: auto; aspect-ratio: 16 / 8; object-fit: cover; object-position: center 30%; }
+@media (min-width: 901px) {
+  .team-photo { max-width: 66%; margin-left: auto; margin-right: var(--pad); }
+  .team-photo img { aspect-ratio: 3 / 2; }
+}
+
+/* Marca Pessoal: bloco "Não escrevemos guiões" solto */
+.mp-noscript-wrap .mp-noscript { margin-top: 0; }
+/* Sobre Nós: título e foto lado a lado */
+.hero--team .team-photo { margin: 0; max-width: none; }
+.hero--team .team-photo img { aspect-ratio: 3 / 2; border-radius: 4px; }
+@media (min-width: 901px) {
+  .hero--team { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); grid-template-rows: auto auto; align-items: end; column-gap: clamp(32px, 4vw, 72px); }
+  .hero--team .hero__title { grid-column: 1; grid-row: 1; }
+  .hero--team .hero__side { grid-column: 1; grid-row: 2; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .hero--team .team-photo { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+}
+@media (min-width: 901px) {
+  .hero--team { grid-template-rows: 1fr 1fr; row-gap: 24px; }
+  .hero--team .hero__title { align-self: end; }
+  .hero--team .hero__side { align-self: start; }
+}
