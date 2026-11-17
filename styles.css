@@ -981,3 +981,13 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .case__body--flow { padding-top: clamp(56px, 7vw, 104px); padding-bottom: clamp(56px, 7vw, 104px); }
 .case__video--flow { margin-top: 0; }
 .case__body--flow:last-of-type { padding-bottom: clamp(64px, 9vw, 128px); }
+
+/* Nuvem lima do topo: respira devagar e reage ao cursor */
+.hero__glow {
+  translate: var(--gx, 0px) var(--gy, 0px);
+  scale: var(--gs, 1);
+  animation: glow-breathe 9s ease-in-out infinite;
+  will-change: translate, scale;
+}
+@keyframes glow-breathe { 0%, 100% { opacity: .85; } 50% { opacity: .7; } }
+@media (prefers-reduced-motion: reduce) { .hero__glow { animation: none; translate: none; scale: none; } }
