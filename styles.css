@@ -1004,3 +1004,5 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 /* Menu: não quebrar linhas em ecrãs médios */
 .nav__links a, .nav__place { white-space: nowrap; }
 @media (min-width: 901px) and (max-width: 1200px) { .nav__links { gap: 20px; } .nav__place { display: none; } .nav { grid-template-columns: 1fr auto; } }
+/* "Portimão, Portugal" com o mesmo estilo dos links do menu */
+.nav__place { font-size: 12.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; gap: 10px; }
