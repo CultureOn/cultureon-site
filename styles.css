@@ -991,3 +991,16 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 }
 @keyframes glow-breathe { 0%, 100% { opacity: .85; } 50% { opacity: .7; } }
 @media (prefers-reduced-motion: reduce) { .hero__glow { animation: none; translate: none; scale: none; } }
+
+/* Home: texto de apoio no canto superior direito (computador) */
+@media (min-width: 901px) {
+  .hero--home .hero__leadrow {
+    position: absolute; z-index: 1; right: var(--pad); top: clamp(96px, 16vh, 170px);
+    max-width: 440px;
+  }
+  .hero--home .hero__bar { flex-basis: clamp(40px, 3.5vw, 64px); }
+  .hero--home .hero__lead { max-width: 340px; font-size: clamp(15px, 1.05vw, 17px); }
+}
+/* Menu: não quebrar linhas em ecrãs médios */
+.nav__links a, .nav__place { white-space: nowrap; }
+@media (min-width: 901px) and (max-width: 1200px) { .nav__links { gap: 20px; } .nav__place { display: none; } .nav { grid-template-columns: 1fr auto; } }
