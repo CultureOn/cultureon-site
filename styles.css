@@ -1133,3 +1133,8 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
   .svc-panel { grid-template-columns: 1fr; }
   .svc-panel__num { grid-row: auto; }
 }
+/* Serviços: pequeno título centrado por cima da nuvem */
+.svc-intro { text-align: center; margin-bottom: clamp(24px, 3vw, 40px); }
+.svc-intro__text { font-family: var(--body); font-weight: 500; font-size: 12.5px; line-height: 1.35; text-transform: uppercase; letter-spacing: .02em; max-width: none; }
+.svc-intro__text strong { font-weight: 700; margin-right: .4em; }
+.svc-cloud-wrap { padding-top: 0; }
