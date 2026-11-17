@@ -115,6 +115,19 @@ document.querySelectorAll('.phones').forEach(row => {
   hero.addEventListener('pointerleave', () => { tx = 0; ty = 0; ts = 1; go(); });
 })();
 
+// Serviços em nuvem: clicar abre a descrição (um de cada vez)
+(() => {
+  const cloud = document.querySelector('.svc-cloud');
+  if (!cloud) return;
+  const tabs = [...cloud.querySelectorAll('.svc-item')];
+  tabs.forEach(t => t.addEventListener('click', () => {
+    const open = t.getAttribute('aria-expanded') === 'true';
+    tabs.forEach(o => { o.setAttribute('aria-expanded', 'false'); document.getElementById(o.getAttribute('aria-controls')).hidden = true; });
+    if (!open) { t.setAttribute('aria-expanded', 'true'); document.getElementById(t.getAttribute('aria-controls')).hidden = false; }
+    cloud.classList.toggle('has-open', !open);
+  }));
+})();
+
 // Formulários: enviam para o Formspree via fetch.
 // Enquanto o ID não estiver configurado (SEU_ID), mostram só uma mensagem.
 document.querySelectorAll('form.form').forEach(form => {

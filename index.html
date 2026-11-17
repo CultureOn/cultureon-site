@@ -9,7 +9,7 @@
   <meta property="og:description" content="Ligamos estratégia, vídeo e design no mesmo interruptor.">
   <meta property="og:image" content="assets/img/projetos/autodromo.jpg">
   <link rel="preload" href="assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=e0a5b859">
+  <link rel="stylesheet" href="styles.css?v=b16b0760">
 </head>
 <body>
 
@@ -66,40 +66,46 @@
       </div>
     </header>
 
-    <ol class="services__list" id="lista-servicos">
-      <li class="service reveal">
-        <span class="service__num">Serviço 01</span>
-        <h3 class="service__name">Estratégia</h3>
-        <div class="service__body">
+    <div class="svc-cloud-wrap" id="lista-servicos">
+      <p class="svc-hint">Passa o cursor e clica num serviço para saber mais</p>
+      <div class="svc-cloud">
+        <button type="button" class="svc-item" id="svc-tab-1" aria-expanded="false" aria-controls="svc-panel-1"><sup>01.</sup>Estratégia</button> <button type="button" class="svc-item" id="svc-tab-2" aria-expanded="false" aria-controls="svc-panel-2"><sup>02.</sup>Vídeo</button> <button type="button" class="svc-item" id="svc-tab-3" aria-expanded="false" aria-controls="svc-panel-3"><sup>03.</sup>Marca Pessoal</button> <button type="button" class="svc-item" id="svc-tab-4" aria-expanded="false" aria-controls="svc-panel-4"><sup>04.</sup>Design</button>
+      </div>
+      <div class="svc-panels">
+      <div class="svc-panel" id="svc-panel-1" role="region" aria-labelledby="svc-tab-1" hidden>
+        <p class="svc-panel__num">Serviço 01</p>
+        <h3 class="svc-panel__name">Estratégia</h3>
+        <div class="svc-panel__body">
           <p><strong>Clarificar.</strong> Percebemos o negócio antes de falar de comunicação. Sais com decisões tomadas, escritas e aplicáveis.</p>
           <ul class="tags"><li>Auditoria</li><li>Pesquisa</li><li>Posicionamento</li></ul>
         </div>
-      </li>
-      <li class="service reveal">
-        <span class="service__num">Serviço 02</span>
-        <h3 class="service__name">Vídeo</h3>
-        <div class="service__body">
+      </div>
+      <div class="svc-panel" id="svc-panel-2" role="region" aria-labelledby="svc-tab-2" hidden>
+        <p class="svc-panel__num">Serviço 02</p>
+        <h3 class="svc-panel__name">Vídeo</h3>
+        <div class="svc-panel__body">
           <p>Não filmamos por filmar. De eventos a campanhas, cada vídeo parte de uma decisão — não é conteúdo por conteúdo.</p>
           <ul class="tags"><li>Cobertura de Eventos</li><li>Ativação de Marca</li><li>Vídeo Publicitário</li></ul>
         </div>
-      </li>
-      <li class="service reveal">
-        <span class="service__num">Serviço 03</span>
-        <h3 class="service__name">Marca Pessoal<sup>*</sup></h3>
-        <div class="service__body">
+      </div>
+      <div class="svc-panel" id="svc-panel-3" role="region" aria-labelledby="svc-tab-3" hidden>
+        <p class="svc-panel__num">Serviço 03</p>
+        <h3 class="svc-panel__name">Marca Pessoal</h3>
+        <div class="svc-panel__body">
           <p>Sê a cara do teu negócio — sem teres de ser também o teu videógrafo. Um sistema fechado de identidade e vídeo para quem constrói uma marca à volta do próprio nome.</p>
           <ul class="tags"><li>Identidade</li><li>Motion System</li><li>Vídeos Mensais</li></ul>
         </div>
-      </li>
-      <li class="service reveal">
-        <span class="service__num">Serviço 04</span>
-        <h3 class="service__name">Design</h3>
-        <div class="service__body">
+      </div>
+      <div class="svc-panel" id="svc-panel-4" role="region" aria-labelledby="svc-tab-4" hidden>
+        <p class="svc-panel__num">Serviço 04</p>
+        <h3 class="svc-panel__name">Design</h3>
+        <div class="svc-panel__body">
           <p>A forma que a decisão ganha. Identidade, embalagem e digital, sempre a partir do que já foi clarificado.</p>
           <ul class="tags"><li>Branding</li><li>Packaging</li><li>Webdesign</li><li>Design Gráfico</li></ul>
         </div>
-      </li>
-    </ol>
+      </div>
+      </div>
+    </div>
   </section>
 
   <!-- PROJETOS -->
@@ -218,6 +224,6 @@
   </div>
 </footer>
 
-<script src="main.js?v=ccde6694"></script>
+<script src="main.js?v=1c2abd54"></script>
 </body>
 </html>

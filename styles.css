@@ -1105,3 +1105,31 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .nos::before { left: max(82%, calc(min(104px, 100cqi / 10.6) * 11)); }
 .nos::after  { left: max(66%, calc(min(104px, 100cqi / 10.6) * 10.8)); }
 @media (max-width: 1200px) { .nos::before, .nos::after { display: none; } }
+
+/* ================= SERVIÇOS em nuvem centrada (hover + abrir descrição) ================= */
+.svc-cloud-wrap { padding: clamp(24px, 4vw, 56px) 0 0; }
+.svc-hint { text-align: center; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--mid); margin-bottom: 24px; }
+.svc-cloud { text-align: center; max-width: 1100px; margin: 0 auto; line-height: 1; }
+.svc-item {
+  display: inline; position: relative; background: none; border: 0; padding: 0 .12em; margin: 0; cursor: pointer;
+  font-family: var(--display); font-weight: 700; text-transform: uppercase; color: var(--black);
+  font-size: clamp(34px, 6vw, 92px); line-height: 1.08; letter-spacing: -.055em;
+  transition: opacity .3s ease, color .3s ease, background-size .35s ease;
+  background-image: linear-gradient(var(--accent), var(--accent)); background-repeat: no-repeat;
+  background-position: 0 88%; background-size: 0% .14em;
+}
+.svc-item sup { font-family: var(--body); font-size: .16em; font-weight: 600; letter-spacing: 0; vertical-align: 4.2em; margin-right: .35em; }
+.svc-cloud:hover .svc-item, .svc-cloud.has-open .svc-item { opacity: .22; }
+.svc-cloud .svc-item:hover, .svc-cloud .svc-item:focus-visible, .svc-cloud .svc-item[aria-expanded="true"] { opacity: 1; background-size: 100% .14em; outline: none; }
+.svc-panels { max-width: 760px; margin: 0 auto; }
+.svc-panel { display: grid; grid-template-columns: 140px 1fr; gap: 8px 32px; padding: clamp(28px, 4vw, 48px) 0 0; animation: svc-in .45s cubic-bezier(.2,.7,.2,1); }
+.svc-panel[hidden] { display: none; }
+@keyframes svc-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.svc-panel__num { font-size: 12px; color: var(--mid); grid-row: 1 / 3; padding-top: .3em; }
+.svc-panel__name { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 22px; letter-spacing: -.03em; }
+.svc-panel__body p { font-size: 15px; line-height: 1.55; color: #444; margin-bottom: 14px; max-width: 52ch; }
+@media (max-width: 700px) {
+  .svc-item { font-size: clamp(28px, 9vw, 44px); }
+  .svc-panel { grid-template-columns: 1fr; }
+  .svc-panel__num { grid-row: auto; }
+}
