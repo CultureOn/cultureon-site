@@ -976,3 +976,8 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .case__cover--video { position: relative; background: var(--black); }
 .case__cover--video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .case__extra { margin-top: 16px; }
+/* Casos com ordem personalizada (imagens, textos e vídeo intercalados) */
+.case__gallery--flow { padding-top: 16px; padding-bottom: 0; }
+.case__body--flow { padding-top: clamp(56px, 7vw, 104px); padding-bottom: clamp(56px, 7vw, 104px); }
+.case__video--flow { margin-top: 0; }
+.case__body--flow:last-of-type { padding-bottom: clamp(64px, 9vw, 128px); }
