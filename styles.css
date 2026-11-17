@@ -1050,3 +1050,39 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
   .hero--team .hero__title { align-self: end; }
   .hero--team .hero__side { align-self: start; }
 }
+
+/* ================= "Não escrevemos guiões" — composição tipográfica brutalista ================= */
+.mp-noscript-wrap { padding-top: clamp(64px, 9vw, 128px); }
+.nos { position: relative; container-type: inline-size; border-top: 1.5px solid var(--black); border-bottom: 1.5px solid var(--black); padding: 18px 0; }
+.nos::before, .nos::after { content: ""; position: absolute; background: var(--black); pointer-events: none; }
+.nos::before { left: 50%; top: 0; bottom: 0; width: 1px; opacity: .15; }
+.nos::after  { left: 0; right: 0; top: 50%; height: 1px; opacity: .15; }
+.nos__meta { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: start; gap: 24px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.nos__meta span:nth-child(2) { text-align: center; }
+.nos__meta span:last-child { text-align: right; }
+.nos__title {
+  position: relative; z-index: 1; margin: clamp(28px, 4vw, 64px) 0;
+  font-family: var(--display); font-weight: 700; text-transform: uppercase;
+  font-size: calc(100cqi / 8.6); line-height: .86; letter-spacing: -.065em;
+}
+.nos__l { display: block; white-space: nowrap; }
+.nos__l--2, .nos__l--4 { text-align: right; }
+.nos__l--3 { padding-left: 14%; }
+.nos__l--5 { margin-top: .08em; }
+.nos__block { display: inline-block; background: var(--black); color: var(--white); padding: .02em .12em .06em; line-height: .9; }
+.nos__text { margin: 0; text-transform: none; letter-spacing: 0; font-weight: 500; font-size: 13px; line-height: 1.45; max-width: 34ch; justify-self: center; text-align: left; }
+.nos__meta--bottom { align-items: end; }
+.nos__arrow { font-size: 22px; line-height: 1; }
+@media (max-width: 700px) {
+  .nos__meta { grid-template-columns: 1fr 1fr; }
+  .nos__meta--top span:nth-child(2) { display: none; }
+  .nos__meta--bottom { grid-template-columns: 1fr auto; }
+  .nos__meta--bottom > span:first-child { display: none; }
+  .nos__text { justify-self: start; }
+  .nos__title { font-size: calc(100cqi / 6.4); }
+  .nos__l--3 { padding-left: 0; }
+}
+.nos__title { font-size: calc(100cqi / 9.1); }
+.nos__l--3 { padding-left: 9%; }
+@media (max-width: 700px) { .nos__title { font-size: calc(100cqi / 9.1); } .nos__l--3 { padding-left: 0; } }
