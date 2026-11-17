@@ -1086,3 +1086,15 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .nos__title { font-size: calc(100cqi / 9.1); }
 .nos__l--3 { padding-left: 9%; }
 @media (max-width: 700px) { .nos__title { font-size: calc(100cqi / 9.1); } .nos__l--3 { padding-left: 0; } }
+/* "Não escrevemos guiões": mais pequeno, mais legível, mais espaço */
+.nos { padding: 22px 0; }
+.nos__title {
+  font-size: min(104px, calc(100cqi / 10.6));
+  line-height: 1.04; letter-spacing: -.045em;
+  margin: clamp(64px, 9vw, 140px) 0;
+}
+.nos__l + .nos__l { margin-top: .06em; }
+.nos__l--5 { margin-top: .5em !important; }
+.nos__block { padding: .08em .16em .1em; }
+@media (max-width: 700px) { .nos__title { font-size: calc(100cqi / 9.6); margin: 48px 0; } }
+.nos__title { max-width: 10.4em; }
