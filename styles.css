@@ -1160,3 +1160,4 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .hero__star { align-self: flex-start; margin-top: 3px; }
 .svc-intro__line { display: block; }
 @media (max-width: 600px) { .svc-intro__line { display: inline; } .svc-intro__text { text-wrap: balance; max-width: 30ch; margin: 0 auto; } }
+.svc-intro { margin-bottom: clamp(40px, 4.5vw, 72px); }
