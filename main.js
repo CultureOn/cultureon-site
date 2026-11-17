@@ -70,6 +70,23 @@ if (vmodal) {
   vmodal.addEventListener('close', () => { frame.innerHTML = ''; });
 }
 
+// Reels: pontos indicadores do swipe no telemóvel
+document.querySelectorAll('.phones').forEach(row => {
+  const phones = [...row.querySelectorAll('.phone')];
+  if (phones.length < 2) return;
+  const dots = document.createElement('div');
+  dots.className = 'phones__dots'; dots.setAttribute('aria-hidden', 'true');
+  dots.innerHTML = phones.map((_, i) => `<span${i ? '' : ' class="is-on"'}></span>`).join('');
+  row.after(dots);
+  const update = () => {
+    const mid = row.scrollLeft + row.clientWidth / 2;
+    let best = 0, dist = Infinity;
+    phones.forEach((p, i) => { const c = p.offsetLeft + p.offsetWidth / 2; const d = Math.abs(c - mid); if (d < dist) { dist = d; best = i; } });
+    [...dots.children].forEach((d, i) => d.classList.toggle('is-on', i === best));
+  };
+  row.addEventListener('scroll', update, { passive: true });
+});
+
 // Formulários: enviam para o Formspree via fetch.
 // Enquanto o ID não estiver configurado (SEU_ID), mostram só uma mensagem.
 document.querySelectorAll('form.form').forEach(form => {

@@ -957,3 +957,19 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 /* Reels: três iPhones distribuídos por toda a largura */
 .phones { max-width: none; grid-template-columns: repeat(3, minmax(0, 380px)); justify-content: space-between; }
 @media (max-width: 700px) { .phones { grid-template-columns: 1fr; justify-content: stretch; } }
+/* Reels no telemóvel: deslizar para o lado (swipe) entre iPhones */
+@media (max-width: 700px) {
+  .case__reels { padding-left: 0; padding-right: 0; }
+  .case__reels .eyebrow { margin-left: var(--pad); }
+  .phones {
+    display: flex; gap: 16px; max-width: none; margin: 0;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    padding: 4px var(--pad) 28px; scroll-padding: 0 var(--pad); scrollbar-width: none;
+  }
+  .phones::-webkit-scrollbar { display: none; }
+  .phone { flex: 0 0 76%; scroll-snap-align: center; }
+  .phones__dots { display: flex; justify-content: center; gap: 8px; margin-top: 4px; }
+  .phones__dots span { width: 7px; height: 7px; border-radius: 50%; background: #cfcfcf; transition: background .25s, width .25s; }
+  .phones__dots span.is-on { width: 22px; border-radius: 999px; background: var(--black); }
+}
+@media (min-width: 701px) { .phones__dots { display: none; } }
