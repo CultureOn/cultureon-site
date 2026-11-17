@@ -1098,3 +1098,10 @@ body:has(.hero--home) .nav { background: rgba(246,245,241,.9); }
 .nos__block { padding: .08em .16em .1em; }
 @media (max-width: 700px) { .nos__title { font-size: calc(100cqi / 9.6); margin: 48px 0; } }
 .nos__title { max-width: 10.4em; }
+/* Cruz da composição "Não escrevemos guiões" fora do texto, do lado direito */
+.nos::before { left: 82%; }
+.nos::after { left: 66%; right: 0; }
+@media (max-width: 1100px) { .nos::before, .nos::after { display: none; } }
+.nos::before { left: max(82%, calc(min(104px, 100cqi / 10.6) * 11)); }
+.nos::after  { left: max(66%, calc(min(104px, 100cqi / 10.6) * 10.8)); }
+@media (max-width: 1200px) { .nos::before, .nos::after { display: none; } }
