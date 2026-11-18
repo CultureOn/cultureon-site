@@ -65,6 +65,11 @@ if (vmodal) {
     frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Vídeo"></iframe>`;
     vmodal.showModal();
   }));
+  document.querySelectorAll('[data-vimeo-modal]').forEach(btn => btn.addEventListener('click', () => {
+    vmodal.classList.toggle('is-vertical', !!btn.closest('.mp-reel'));
+    frame.innerHTML = `<iframe src="https://player.vimeo.com/video/${btn.dataset.vimeoModal}?autoplay=1&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vídeo"></iframe>`;
+    vmodal.showModal();
+  }));
   vmodal.querySelector('.vmodal__close').addEventListener('click', close);
   vmodal.addEventListener('click', e => { if (e.target === vmodal) close(); });
   vmodal.addEventListener('close', () => { frame.innerHTML = ''; });
