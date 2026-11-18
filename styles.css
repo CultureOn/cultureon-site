@@ -1225,3 +1225,7 @@ body.page-lib .footer { border-top: 1px solid #222; }
   .lib-tabs { top: 60px; }
 }
 .lib-hero__title { line-height: 1.04; }
+
+/* Home: lead quebra antes de "que" no computador */
+.br-desk { display: none; }
+@media (min-width: 901px) { .br-desk { display: inline; } }
