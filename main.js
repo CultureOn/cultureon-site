@@ -128,6 +128,28 @@ document.querySelectorAll('.phones').forEach(row => {
   }));
 })();
 
+// Biblioteca de vídeos: filtros e play no próprio cartão
+(() => {
+  const tabs = document.querySelectorAll('.lib-tab');
+  const secs = document.querySelectorAll('.lib-sec');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(o => o.classList.toggle('is-active', o === t));
+    const f = t.dataset.filter;
+    secs.forEach(s => { s.hidden = f !== 'all' && s.dataset.cat !== f; });
+    const top = document.querySelector('.lib-tabs');
+    if (top && window.scrollY > top.offsetTop) window.scrollTo({ top: top.offsetTop - 64, behavior: 'smooth' });
+  }));
+  document.querySelectorAll('.lib-card__media').forEach(btn => btn.addEventListener('click', () => {
+    if (btn.classList.contains('is-playing')) return;
+    const src = btn.dataset.yt
+      ? `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0&playsinline=1`
+      : `https://player.vimeo.com/video/${btn.dataset.vimeo}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`;
+    const f = document.createElement('iframe');
+    f.src = src; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true; f.title = btn.getAttribute('aria-label') || 'Vídeo';
+    btn.classList.add('is-playing'); btn.appendChild(f);
+  }));
+})();
+
 // Formulários: enviam para o Formspree via fetch.
 // Enquanto o ID não estiver configurado (SEU_ID), mostram só uma mensagem.
 document.querySelectorAll('form.form').forEach(form => {
