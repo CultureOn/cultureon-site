@@ -1263,3 +1263,57 @@ body.page-lib .footer { border-top: 1px solid #222; }
 /* Projeto: banner logo abaixo da capa */
 .case__cover.case__cover--banner { margin-top: 12px; aspect-ratio: auto; height: auto; background: none; }
 .case__cover.case__cover--banner img { aspect-ratio: auto; height: auto; width: 100%; object-fit: contain; display: block; }
+
+/* =========================================================
+   Títulos de página unificados (Sobre, Projetos, Marca Pessoal,
+   Vídeos, Contactos e páginas de projeto)
+   Mesma posição, mesmo tamanho, mesma tipografia, sem verde.
+   ========================================================= */
+body .page-hero {
+  --hero-fit: 9.1;            /* largura (em) da linha mais longa: "A TUA IDENTIDADE." */
+  --hero-max: 120px;
+  display: block !important;
+  container-type: inline-size;
+  min-height: 0 !important;
+  padding: clamp(56px, 7vw, 112px) var(--pad) clamp(48px, 6vw, 96px) !important;
+  text-align: left;
+}
+html body .page-hero.page-hero .page-hero__title.page-hero__title {
+  font-family: var(--display); font-weight: 700; text-transform: uppercase;
+  font-size: min(var(--hero-max), calc(100cqi / var(--hero-fit))) !important;
+  line-height: 1 !important; letter-spacing: -.06em !important;
+  color: inherit !important; margin: 0 !important; max-width: none; text-wrap: initial;
+}
+body .page-hero .page-hero__title span { display: block; color: inherit !important; background: none !important; }
+body .page-hero .page-hero__title .accent, body .page-hero .page-hero__title mark { color: inherit !important; background: none !important; padding: 0 !important; }
+body .page-hero .page-hero__side {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 18px;
+  margin: clamp(28px, 3vw, 44px) 0 0 !important; padding: 0 !important; max-width: none; width: auto;
+}
+body .page-hero .page-hero__lead {
+  max-width: 46ch !important; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; margin: 0 !important;
+}
+body .lib .page-hero .page-hero__lead { color: #9a9a9a; }
+
+/* Sobre: foto à direita, alinhada com o topo do título */
+@media (min-width: 1000px) {
+  body .page-hero--media { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); grid-template-rows: auto auto 1fr; column-gap: clamp(32px, 4vw, 72px); row-gap: 0; align-items: start; }
+  body .page-hero--media .page-hero__title { grid-column: 1; grid-row: 1; }
+  body .page-hero--media .page-hero__side { grid-column: 1; grid-row: 2; }
+  body .page-hero--media .team-photo { grid-column: 2; grid-row: 1 / 4; margin: 0 !important; align-self: start; }
+}
+@media (max-width: 999px) {
+  body .page-hero--media .team-photo { margin: clamp(32px, 5vw, 48px) 0 0 !important; max-width: none; }
+}
+
+/* Páginas de projeto: o link "← Projetos" fica por cima, sem empurrar o título */
+body .page-hero--case { padding-bottom: clamp(32px, 4vw, 56px) !important; }
+body .page-hero--case .link-arrow--back { display: inline-flex; margin-bottom: 18px; }
+body .page-hero--case .page-hero__title { margin-top: 0; }
+body .page-hero--case { padding-top: calc(clamp(56px, 7vw, 112px) - 41px) !important; }
+
+/* Telemóvel: as linhas podem partir; o tamanho é dado pela palavra mais longa */
+@media (max-width: 700px) {
+  body .page-hero { --hero-fit: 6.1; }
+  html body .page-hero--case.page-hero--case .page-hero__title.page-hero__title { font-size: min(var(--hero-max), calc(100cqi / var(--hero-fit)), calc(100cqi / var(--fit, .01))) !important; }
+}
