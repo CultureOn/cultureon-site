@@ -363,3 +363,6 @@ section[id] { scroll-margin-top: calc(var(--nav-h, 64px) + 64px); }
 .mp2 > .section, .mp2 > .mp2-hero { padding-left: var(--pad); padding-right: var(--pad); }
 .mp2-services, .mp2-steps, .mp2-cases { max-width: var(--mp2-max); margin-left: auto; margin-right: auto; }
 .mp2-reel__eyebrow { margin-left: var(--pad) !important; }
+/* v2.6: textos de apoio por baixo do título, à esquerda */
+.mp2-head { grid-template-columns: 1fr; gap: clamp(18px, 2vw, 28px); }
+.mp2-head__aside { justify-self: start; max-width: 480px; }
