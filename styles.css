@@ -1257,3 +1257,5 @@ body.page-lib .footer { border-top: 1px solid #222; }
 /* Footer: "Vamos / dar o / switch." no telemóvel */
 .br-m, .sp-m { display: none; }
 @media (max-width: 600px) { .br-m { display: inline; } .sp-m { display: inline; } .br-d { display: none; } }
+/* Contactos: cada frase numa linha, também em telemóveis estreitos */
+@media (max-width: 389px) { .hero__lead--contact { font-size: 3.75vw; } }
