@@ -1241,3 +1241,10 @@ body.page-lib .footer { border-top: 1px solid #222; }
   .hero--home .hero__cue { font-size: 11px; gap: 14px; }
   .hero--home .hero__cue-circle { width: 32px; height: 32px; }
 }
+
+/* Home: serviços no telemóvel — sem eyebrow, intro mais compacta */
+@media (max-width: 600px) {
+  .eyebrow--svc { display: none; }
+  .svc-intro__text { font-size: 10.5px; line-height: 1.4; letter-spacing: .03em; max-width: 36ch; }
+  .svc-intro { margin-bottom: 28px; }
+}
