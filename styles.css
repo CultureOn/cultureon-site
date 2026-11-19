@@ -1229,3 +1229,15 @@ body.page-lib .footer { border-top: 1px solid #222; }
 /* Home: lead quebra antes de "que" no computador */
 .br-desk { display: none; }
 @media (min-width: 901px) { .br-desk { display: inline; } }
+
+/* Home: hero mais leve no telemóvel (só ≤600px) */
+@media (max-width: 600px) {
+  .hero--home { padding-top: 40px; padding-bottom: 28px; }
+  .hero--home .hero__title { font-size: min(136px, calc(74cqi / var(--fit, 8))) !important; }
+  .hero--home .hero__side { gap: 32px; }
+  .hero--home .hero__leadrow { gap: 14px; }
+  .hero--home .hero__star svg { width: 22px; height: 22px; }
+  .hero--home .hero__lead { font-size: 14.5px; line-height: 1.4; max-width: 300px; }
+  .hero--home .hero__cue { font-size: 11px; gap: 14px; }
+  .hero--home .hero__cue-circle { width: 32px; height: 32px; }
+}
