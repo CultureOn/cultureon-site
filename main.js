@@ -167,7 +167,13 @@ document.querySelectorAll('form.form').forEach(form => {
     }
     status.textContent = 'A enviar…';
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const data = new FormData(form);
+      const full = form.classList.contains('form--full');
+      const page = document.title.split(' - ')[0];
+      data.append('_subject', full ? 'Novo pedido de contacto (página Contactos)' : 'Novo contacto pelo rodapé: ' + page);
+      data.append('origem', (full ? 'Formulário Contactos' : 'Rodapé') + ' · ' + location.pathname);
+      if (data.get('email')) data.append('_replyto', data.get('email'));
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       if (!res.ok) throw new Error();
       form.reset();
       status.textContent = 'Obrigado! Entramos em contacto em breve.';
