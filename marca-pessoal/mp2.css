@@ -356,3 +356,10 @@ section[id] { scroll-margin-top: calc(var(--nav-h, 64px) + 64px); }
 .mp2-hero__ctas .mp2-link { margin-top: 4px; }
 .mp2-anchors a.mp2-pill--cta.is-active small { color: var(--accent); }
 .mp2-svc:not(.mp2-svc--full) .mp2-svc__cta .btn { gap: 18px; padding-right: 20px; }
+
+/* ---------- v2.5: textos alinhados com as margens do resto do site ----------
+   Títulos, eyebrows e textos de apoio usam a margem normal do site (--pad), à esquerda e à direita.
+   Vídeo, âncoras, serviços, passos e casos mantêm-se na coluna central de 1200px. */
+.mp2 > .section, .mp2 > .mp2-hero { padding-left: var(--pad); padding-right: var(--pad); }
+.mp2-services, .mp2-steps, .mp2-cases { max-width: var(--mp2-max); margin-left: auto; margin-right: auto; }
+.mp2-reel__eyebrow { margin-left: var(--pad) !important; }
