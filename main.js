@@ -1,4 +1,4 @@
-// CultureOn — Home v1
+// CultureOn - Home v1
 document.documentElement.classList.add('js');
 
 // Nav: borda ao fazer scroll + menu mobile
@@ -162,7 +162,7 @@ document.querySelectorAll('form.form').forEach(form => {
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     if (form.action.includes('SEU_ID')) {
-      status.textContent = 'Formulário ainda por ligar — escreve-nos para geral@cultureon.pt.';
+      status.textContent = 'Formulário ainda por ligar. Escreve-nos para geral@cultureon.pt.';
       return;
     }
     status.textContent = 'A enviar…';
