@@ -1259,3 +1259,7 @@ body.page-lib .footer { border-top: 1px solid #222; }
 @media (max-width: 600px) { .br-m { display: inline; } .sp-m { display: inline; } .br-d { display: none; } }
 /* Contactos: cada frase numa linha, também em telemóveis estreitos */
 @media (max-width: 389px) { .hero__lead--contact { font-size: 3.75vw; } }
+
+/* Projeto: banner logo abaixo da capa */
+.case__cover.case__cover--banner { margin-top: 12px; aspect-ratio: auto; height: auto; background: none; }
+.case__cover.case__cover--banner img { aspect-ratio: auto; height: auto; width: 100%; object-fit: contain; display: block; }
