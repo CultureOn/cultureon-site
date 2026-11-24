@@ -1317,3 +1317,9 @@ body .page-hero--case { padding-top: calc(clamp(56px, 7vw, 112px) - 41px) !impor
   body .page-hero { --hero-fit: 6.1; }
   html body .page-hero--case.page-hero--case .page-hero__title.page-hero__title { font-size: min(var(--hero-max), calc(100cqi / var(--hero-fit)), calc(100cqi / var(--fit, .01))) !important; }
 }
+
+/* Telemóvel: títulos de página um pouco mais pequenos, várias palavras por linha */
+@media (max-width: 700px) { body .page-hero { --hero-fit: 9.05; } }
+@media (max-width: 389px) { body .page-hero .page-hero__lead.hero__lead--contact { font-size: 3.75vw; } }
+/* Projetos: espaço para a vírgula de "O TRABALHO," não tocar na linha de baixo */
+html body .page-hero.page-hero .page-hero__title.page-hero__title.page-hero__title--comma { line-height: 1.06 !important; }
